@@ -6,21 +6,21 @@
   --font-family-signage: 'Google Sans', 'Product Sans', 'Inter', system-ui, sans-serif;
   --font-family-mono: 'IBM Plex Mono', monospace;
 
-  --color-concourse: #EAEBEE;
-  --color-ink: #15181C;
-  --color-rule: #C7CBD1;
+  --color-concourse: #07090e;
+  --color-ink: #f8fafc;
+  --color-rule: #1e293b;
   
-  --color-line-gateway: #E8890C;
-  --color-line-order: #1E5FBF;
-  --color-line-payment: #6B3FA0;
-  --color-line-inventory: #0E8A72;
+  --color-line-gateway: #f59e0b;
+  --color-line-order: #3b82f6;
+  --color-line-payment: #8b5cf6;
+  --color-line-inventory: #10b981;
   
-  --color-status-ontime: #2E7D46;
-  --color-status-delayed: #C48A1D;
-  --color-status-cancelled: #C0362C;
+  --color-status-ontime: #10b981;
+  --color-status-delayed: #f59e0b;
+  --color-status-cancelled: #ef4444;
   
-  --color-board-bg: #0D0F12;
-  --color-board-text: #EDE3CE;
+  --color-board-bg: #05070a;
+  --color-board-text: #f8fafc;
 
   /* Aegis SDK Developer Portal Theme Tokens */
   --bg-dark: #07090e;
@@ -44,8 +44,8 @@
 /* ─── Typography & Reset ───────────────────────────────────────────────────── */
 @layer base {
   body {
-    background-color: var(--color-concourse);
-    color: var(--color-ink);
+    background-color: #07090e;
+    color: #f8fafc;
     font-family: var(--font-family-sans);
     min-height: 100vh;
     overflow-x: hidden;
