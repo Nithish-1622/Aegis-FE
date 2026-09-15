@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+/* ─── Transit Concourse Design Tokens ───────────────────────────────────────── */
+@theme {
+  --font-family-sans: 'Google Sans', 'Product Sans', 'Inter', system-ui, sans-serif;
+  --font-family-signage: 'Google Sans', 'Product Sans', 'Inter', system-ui, sans-serif;
+  --font-family-mono: 'IBM Plex Mono', monospace;
+
+  --color-concourse: #EAEBEE;
+  --color-ink: #15181C;
+  --color-rule: #C7CBD1;
+  
+  --color-line-gateway: #E8890C;
+  --color-line-order: #1E5FBF;
+  --color-line-payment: #6B3FA0;
+  --color-line-inventory: #0E8A72;
+  
+  --color-status-ontime: #2E7D46;
+  --color-status-delayed: #C48A1D;
+  --color-status-cancelled: #C0362C;
+  
+  --color-board-bg: #0D0F12;
+  --color-board-text: #EDE3CE;
+
+  /* Aegis SDK Developer Portal Theme Tokens */
+  --bg-dark: #07090e;
+  --bg-card: rgba(15, 23, 42, 0.65);
+  --bg-card-hover: rgba(30, 41, 59, 0.8);
+  --bg-glass: rgba(255, 255, 255, 0.03);
+
+  --cyan-glow: #00f2fe;
+  --blue-electric: #4facfe;
+  --purple-accent: #7c3aed;
+  --emerald-success: #10b981;
+  --amber-warning: #f59e0b;
+  --rose-danger: #f43f5e;
+
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --border-glass: rgba(255, 255, 255, 0.08);
+  --border-glow: rgba(0, 242, 254, 0.3);
+}
+
+/* ─── Typography & Reset ───────────────────────────────────────────────────── */
+@layer base {
+  body {
+    background-color: var(--color-concourse);
+    color: var(--color-ink);
+    font-family: var(--font-family-sans);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, .font-signage {
+    font-family: var(--font-family-signage);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+  }
+
+  .font-board {
+    font-family: var(--font-family-mono);
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+}
+
+/* ─── Concourse Custom Signage Styles ──────────────────────────────────────── */
+@layer components {
+  /* Crisp Dividers */
+  .concourse-rule {
+    border-color: var(--color-rule);
+    transition: border-color 0.2s ease;
+  }
+  .concourse-rule:hover {
+    border-color: var(--color-ink);
+  }
+
+  /* Swatch Header Chip */
+  .swatch-chip {
+    @apply flex items-center gap-2 px-3 py-1.5 border border-slate-300 bg-white text-xs font-semibold uppercase tracking-wider transition-colors cursor-pointer;
+  }
+  .swatch-chip:hover {
+    border-color: var(--color-ink);
+  }
+
+  /* Transit Platform Tab Selector */
+  .platform-tab {
+    @apply w-10 h-10 rounded-full border border-slate-300 bg-white flex items-center justify-center text-sm font-bold transition-all cursor-pointer;
+  }
+  .platform-tab:hover {
+    border-color: var(--color-ink);
+  }
+  .platform-tab.active {
+    background-color: var(--color-ink);
+    color: var(--color-concourse);
+    border-color: var(--color-ink);
+  }
+}
